@@ -2,8 +2,18 @@
 # For Windows use bin\windows\ instead of bin/, and change the script extension
 # to .bat
 
+## DEPRECATED FOLLOW INSTRUCTIONS USING BOOTSTRAP-SERVER
 # Run built-in script to create new topic named "test" with 1 partition on 1 node
 > bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 
 # See the topic
 > bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+##Create topic
+> bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
+Created topic test.
+
+##If you run point to 2181 port (Zookeper port) it gets and error of Timed out waiting for a node assignment, Kafka runs on port 9092
+
+##List topic
+>bin/kafka-topics.sh --list --bootstrap-server localhost:9092
