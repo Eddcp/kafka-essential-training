@@ -11,7 +11,6 @@
 
 ##Create topic
 > bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
-Created topic test.
 
 ##If you run point to 2181 port (Zookeper port) it gets and error of Timed out waiting for a node assignment, Kafka runs on port 9092
 
